@@ -1,28 +1,28 @@
 /**
- * OOPSBannerApp UC4 - Banner display Application
+ * OOPSBannerApp UC5 - using array inline
  * 
  * @Rithvik Devloper
  * @version 2
  * 
  */
 
-// extend the program to write OOPS using arrays
+// extend the program to write OOPS using array inline
 
 public class OOPSBannerApp {
     public static void main(String[] args) {
-        String[] lines = new String[7];
 
-        lines[0] = String.join("   ", "  *****   ", "  *****   ", "*******   ", "  *****  ");
+        String[] lines = {
+                String.join("   ", "  *****   ", "  *****   ", "*******   ", "  *****  "),
+                String.join("   ", " *     *  ", " *     *  ", "*      *  ", " *     * "),
+                String.join("   ", "*       * ", "*       * ", "*      *  ", "*        "),
+                String.join("   ", "*       * ", "*       * ", "*******   ", "  *****  "),
+                String.join("   ", "*       * ", "*       * ", "*         ", "       * "),
+                String.join("   ", " *     *  ", " *     *  ", "*         ", " *     * "),
+                String.join("   ", "  *****   ", "  *****   ", "*         ", "  *****  ")
+        };
 
-        lines[1] = String.join("   ", " *     *  ", " *     *  ", "*      *  ", " *     * ");
-        lines[2] = String.join("   ", "*       * ", "*       * ", "*      *  ", "*        ");
-        lines[3] = String.join("   ", "*       * ", "*       * ", "*******   ", "  *****  ");
-        lines[4] = String.join("   ", "*       * ", "*       * ", "*         ", "       * ");
-        lines[5] = String.join("   ", " *     *  ", " *     *  ", "*         ", " *     * ");
-        lines[6] = String.join("   ", "  *****   ", "  *****   ", "*         ", "  *****  ");
-
-        for (int i = 0; i < 6; i++) {
-            System.out.println(lines[i]);
+        for (String line : lines) {
+            System.out.println(line); // or for(String line : lines)
 
         }
     }
